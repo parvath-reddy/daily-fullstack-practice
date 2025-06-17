@@ -1,19 +1,166 @@
-h1{
-    color: blue;
-    font-size: 24px;
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-style: normal;
 }
 
-p {
-    color: green;
-    font-size: 16px;
+body {
+    background-color: black;
 }
 
-h2 {
-    background-image: url('https://go-assets.ibcdn.com/u/MMT/images/1736921522031-tgOffer.webp');
+.main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f562aaf4-5dbb-4603-a32b-6ef6c2230136/dh0w8qv-9d8ee6b2-b41a-4681-ab9b-8a227560dc75.jpg/v1/fill/w_1192,h_670,q_70,strp/the_netflix_login_background__canada__2024___by_logofeveryt_dh0w8qv-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvZjU2MmFhZjQtNWRiYi00NjAzLWEzMmItNmVmNmMyMjMwMTM2XC9kaDB3OHF2LTlkOGVlNmIyLWI0MWEtNDY4MS1hYjliLThhMjI3NTYwZGM3NS5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.LOYKSxIDqfPwWHR0SSJ-ugGQ6bECF0yO6Cmc0F26CQs");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: max(1200px, 100vw);
+    height: 81vh;
+    width: 100%;
+    position: relative;
+    background-color: black;
+    opacity: 500%;
+
+
+
+}
+
+.main .box {
+
+    padding: 20px;
+    width: 100%;
+    height: 74.5vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* logo left, buttons right */
+    max-width: 70vw;
+    margin: auto;
+    align-items: center;
+    padding: 20px 50px;
+    position: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    /* fixed height */
+}
+
+nav img {
+    width: 150px;
+    position: relative;
+    z-index: index 10;
+    color: red;
+
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
+}
+
+.hero {
+    font-family: "Martel Sans", sans-serif;
+
+    height: calc(81%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    gap: 20px;
+    padding: 0 30px;
+
+}
+
+.hero>:first-child {
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 15px;
     text-align: center;
+
 }
 
-span {
-    background-color: yellowgreen
+.hero>:nth-child(2) {
+    font-weight: 800;
+    font-size: 24px;
+    gap: 30px;
+    text-align: center;
+
+}
+
+.hero>:nth-child(3) {
+    font-weight: 400;
+    font-size: 15px;
+    gap: 30px;
+    text-align: center;
+
+}
+
+.separation {
+    height: 5px;
+    background-color: rgb(255, 0, 0);
+    opacity: 80%;
+
+}
+
+.btn {
+    padding: 3px 8px;
+    font-weight: 200;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.043);
+    border: 1px solid rgba(255, 255, 255, 0.162);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-red-sm {
+    padding: 3px 8px;
+    background-color: red;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.162);
+    border-radius: 3px;
+    font-weight:  600;
     
+}
+
+.btn-red {
+    padding: 3px 24px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    border-color:  rgba(255, 255, 255, 0.325) ;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.main input {
+    padding: 10px 100px 10px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    background-color: rgba(23, 23, 23, 0.2);
+    /* transparency */
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* soft border */
+    outline: none;
+    backdrop-filter: blur(2px);
+    /* optional for more glass 
+    effect */
+    font-weight: 200;
 }
