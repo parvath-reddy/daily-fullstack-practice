@@ -1,35 +1,27 @@
-console.log("tutorial 2 of js ")
-// this is about VARIABLE 
-var a = 5;
-var b = 10;
-var c = " pr " 
-//var 55 = 55;  this is invalid variable name  
+//these are the premative data types 
+let x = " ankoor goije";
+let y = 22;
+let z = 69.69;
+const r = true
+let q = undefined;
+let n = null;
 
-// ( and also they are case sensative this hello is diffrent and this HeLLo is diffrent  )
+console.log(x,y,z,r,q,n);
+console.log(typeof x,typeof y,typeof z,typeof r,typeof q,typeof n);
 
-console.log(a+b+6)
+//this are the opjects 
 
-console.log(typeof a , typeof b , typeof c)
-
-
-//this is about CONSTANT ( constant is used to not change the number futer it is used as a contannt numner )
-const d1 = 5;
-console.log(d1)
-
-//console.log(d1 + 5) // this is valid
-
-
- // this is about LET ( let is used to declare a variable and it is used to change the value of it and it is also globle variable inlike var )
-let x = 69;
-x = x + 5;
-let y = 96;
-let z = "patti"
+let g = {
+    name : "ankoor",
+    age : 22,
+    gender : "male",
+    isMarried : false
+    }
+console.log(g);
+g.salary="10000cr";
+console.log(g);
+g.salary="50000cr";
+console.log(g);
 
 
-{
-    let x = 5; // ( this is block scope inside the block only this will have its scope )
-    console.log(x) // this is globle variable and it wil print the added number cause of its glober ality
-}
-
-console.log(x) 
  
