@@ -1,19 +1,35 @@
-alert("joining the js");//using this tool we can show alerts in the site 
-console.log("code is running..."); //using this tool we can see the code running in the browser and in inspect console we can see it so it will help in debugging 
-console.log("code is too good running..."); 
-console.log("code is hell ya  running..."); 
+console.log("tutorial 2 of js ")
+// this is about VARIABLE 
+var a = 5;
+var b = 10;
+var c = " pr " 
+//var 55 = 55;  this is invalid variable name  
 
-var a = prompt("enter your number")
-var isTrue = confirm("are you sure you are leaving this page if you youll get vires in your pc ")
-if(isTrue){
-    console.log("the computer is virusing")
+// ( and also they are case sensative this hello is diffrent and this HeLLo is diffrent  )
+
+console.log(a+b+6)
+
+console.log(typeof a , typeof b , typeof c)
+
+
+//this is about CONSTANT ( constant is used to not change the number futer it is used as a contannt numner )
+const d1 = 5;
+console.log(d1)
+
+//console.log(d1 + 5) // this is valid
+
+
+ // this is about LET ( let is used to declare a variable and it is used to change the value of it and it is also globle variable inlike var )
+let x = 69;
+x = x + 5;
+let y = 96;
+let z = "patti"
+
+
+{
+    let x = 5; // ( this is block scope inside the block only this will have its scope )
+    console.log(x) // this is globle variable and it wil print the added number cause of its glober ality
 }
-else{
-    console.log("the computer is not virusing ")
-}
 
-console.log("your numner is "+a)
-
-document.title = "my first web page using js" //in lone css using the js 
-
-document.body.style.backgroundColor = "gray"  // so using js we can also run the css codes here it is very convenient and a bit easyish and also the sintax of js and node js is completly same 
+console.log(x) 
+ 
