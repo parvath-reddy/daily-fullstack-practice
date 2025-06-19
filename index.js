@@ -1,53 +1,46 @@
-console.log(" lfg a tutorial on loops ")
+//the normal way is 
+console.log("hay harry you are nice! ") 
+console.log("hay harry you are good! ") 
+console.log("hay harry your t shirt is good ! ") 
+console.log("hay harry you course is good to! ") 
 
-let a = 1;
-console.log(a)
-console.log(a + 1)
-console.log(a + 2)
 
-//there are 5 types of loops in js
-//1. for loop (its a normal for loop)
-for (let i = 0; i < 100; i++) {
-    console.log(a + i)
-
+//now the optimal way with functions too is 
+// mainly this is used to use the fuction and change something later in function 
+function nice(name) {
+    console.log("hay "+ name +" you are nice !")
+    console.log("hay "+ name +" you are good !")
+    console.log("hay "+ name +" you are good in coding !")
+    
 }
-//4. for in loop ( used for objects)
+nice("harry")
+nice("rohan")
+nice("sachin")
 
-let obj = {
-    name: "john",
-    age: 25,
-    country: "usa"
+
+//sum of two numbers as a function 
+function sum(a , b ,c = 6 /* this is called default parameater */ ) {
+    //console.log(a + b)
+    return a + b - c
 }
-for (const key in obj) {
-    const element = obj[key];
-    console.log(key, element)
+result = sum(5 , 7)
+result1 = sum(45 , 7)
+result2 = sum(565 , 7)
+result3 = sum(534 , 7 ,9 )
+
+console.log("the sun of these numers is. " + result)
+console.log("the sun of these numers is. " + result1)
+console.log("the sun of these numers is. " + result2)
+console.log("the sun of these numers is. " + result3)
+
+
+
+//arrow function  
+const func1 = (x)=>{
+    console.log("im an arrow function ", x)
 }
 
-//5. for of loop (used for arrays,strings )
-
-for (const c of "ankoor") {
-    console.log(c)
-
-}
-
-
-
-//2. while loop (used when we dont know how many times we need to loop)
-
-let p = 0;
-while (p < 11)
-    {
-        console.log(p)
-        p++;
-        }
-
-
-//3. do while loop (used a lot less ) (used when we need to run the loop at least once) , no mater if it is true or false the loop will for sure run once 
-let r = 100;
-do {
-    console.log(r)
-    r++; 
-} while (r<10);
-
-
-
+func1(34);
+func1(45);
+func1(67);
+func1(89);
