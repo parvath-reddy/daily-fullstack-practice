@@ -1,46 +1,55 @@
-//the normal way is 
-console.log("hay harry you are nice! ") 
-console.log("hay harry you are good! ") 
-console.log("hay harry your t shirt is good ! ") 
-console.log("hay harry you course is good to! ") 
+/* create a faulty calculator  usong js 
+this faulty calculator does following 
+1 .  it takes two numers as inpur from user 
+2.  performs wrong operations as follows 
++ -- -
+* -- +
+- -- /
+/ -- **
 
 
-//now the optimal way with functions too is 
-// mainly this is used to use the fuction and change something later in function 
-function nice(name) {
-    console.log("hay "+ name +" you are nice !")
-    console.log("hay "+ name +" you are good !")
-    console.log("hay "+ name +" you are good in coding !")
+and it peforms wrong operations only 10% of times 
+
+*/
+console.log(" faulty calculatar ")
+
+if (Math.random() < 0.1){
+    function sum(a,b){
+        return a-b
+    }
+    function sub(a,b){
+        return a/b
+    }
+    function mul(a,b){
+        return a+b
+    }
+    function div(a,b){
+        return a**b
+    }
+
+}
+
+else{
+
+    function sum(a,b){
+        return a+b
+    }
+    function sub(a,b){
+        return a-b
+    }
+    function mul(a,b){
+        return a*b
+    }
+    function div(a,b){
+        return a/b
+    }
+}
     
-}
-nice("harry")
-nice("rohan")
-nice("sachin")
-
-
-//sum of two numbers as a function 
-function sum(a , b ,c = 6 /* this is called default parameater */ ) {
-    //console.log(a + b)
-    return a + b - c
-}
-result = sum(5 , 7)
-result1 = sum(45 , 7)
-result2 = sum(565 , 7)
-result3 = sum(534 , 7 ,9 )
-
-console.log("the sun of these numers is. " + result)
-console.log("the sun of these numers is. " + result1)
-console.log("the sun of these numers is. " + result2)
-console.log("the sun of these numers is. " + result3)
-
-
-
-//arrow function  
-const func1 = (x)=>{
-    console.log("im an arrow function ", x)
-}
-
-func1(34);
-func1(45);
-func1(67);
-func1(89);
+let c = sum(16,14)
+let d = sub(16,14)
+let p = mul(16,14)
+let q = div(16,14)
+console.log("output of operation --->> "+ c)
+console.log("output of operation --->> "+ d)
+console.log("output of operation --->> "+ p)
+console.log("output of operation --->> "+ q)
