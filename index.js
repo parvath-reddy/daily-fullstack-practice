@@ -1,87 +1,53 @@
-console.log("hello world")
+console.log(" lfg a tutorial on loops ")
 
+let a = 1;
+console.log(a)
+console.log(a + 1)
+console.log(a + 2)
 
+//there are 5 types of loops in js
+//1. for loop (its a normal for loop)
+for (let i = 0; i < 100; i++) {
+    console.log(a + i)
 
-//this is an IF statement same as other coding languages 
-let age = 18;
-let grace = 1
-if (age + grace > 18) {
-    console.log("You are an adult");
-} else {
-    console.log("You are a minor");
+}
+//4. for in loop ( used for objects)
+
+let obj = {
+    name: "john",
+    age: 25,
+    country: "usa"
+}
+for (const key in obj) {
+    const element = obj[key];
+    console.log(key, element)
+}
+
+//5. for of loop (used for arrays,strings )
+
+for (const c of "ankoor") {
+    console.log(c)
+
 }
 
 
 
-console.log(age + grace) // this is how using ARTHAMATIC OPERATOR  will help , operator are diffrent kind as we leaarned from doffent languages 
-console.log(age - grace)
-console.log(age * grace)
-console.log(age ** grace)
-console.log(age % grace)
-// console.log(age++grace) these both are also operatior used in diffrent conditon 
-// console.log(age--grace) 
+//2. while loop (used when we dont know how many times we need to loop)
+
+let p = 0;
+while (p < 11)
+    {
+        console.log(p)
+        p++;
+        }
 
 
-// this is ASSIGNMENT OPERATOR now 
-age += grace
-console.log(age)
-age -= grace
-console.log(age)
-age *= grace
-console.log(age)
-age /= grace
-console.log(age)
-age %= grace
-console.log(age)
-age **= grace
-console.log(age)
-
-//this is cCOMPARISION OPERATOR
-let a = 10
-let b = 20
-console.log(a == b) // this is equal to
-console.log(a != b) // this is not equal to
-console.log(a > b) // this is greater than
-console.log(a < b) // this is less than
-console.log(a >= b) // this is greater than or equal to
-console.log(a <= b) // this is less than or equal to
-console.log(a === b) // this is equal to and data type ( it even compares the data type )
-
-// LOGICAL OPERATORS 
-let x = 10
-let y = 20 //opprant
-console.log(x && y) // this is AND operator
-console.log(x || y) // this is OR operator
-console.log(!x) // this is NOT operator
+//3. do while loop (used a lot less ) (used when we need to run the loop at least once) , no mater if it is true or false the loop will for sure run once 
+let r = 100;
+do {
+    console.log(r)
+    r++; 
+} while (r<10);
 
 
 
-/*
-this is used to write a multi line comment in js 
-*/
-
-
-
-// if else if ladder 
-let time = 13;
-
-if (time > 18) {
-    console.log("Good evening");
-} else if (time > 14) {
-    console.log("Lunch time");
-} else if (time > 12) {
-    console.log("Good afternoon");
-} else if (time > 10) {
-    console.log("Good morning");
-} else {
-    console.log("Too early!");
-}
-
-
-//ternary operator 
-//its more easier to understand and write down the code 
-
-x = 6;
-y = 5;
-let z = (x > b) ? ( a-b ) : ( a+b );
-console.log(z);
