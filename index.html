@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document Object Model</title>
 </head>
 <body>
-    <script src="index.js"></script>
+    <div class="container">
+        div.box
+
+    </div>
+    <script>
+        document.title = "DOM"; // change the title of the page
+        //so dom is used to map the entire html model as a documentry in an object 
+        // by selecting any site and using $ in colsone we can modify the current segment 
+
+        console.log(document.title)
+        console.log(document.body)
+        document.body.style.backgroundColor = "green"
+    </script>
 </body>
 </html>
+
+<!-- under the window the whole DOM & BOM and javascript core lie  -->
