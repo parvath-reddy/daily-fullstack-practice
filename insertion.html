@@ -8,11 +8,13 @@
 <body>
     <div class="container">
         <div class="box" style="flex: auto;" data-createdby="pr" data-conceptby="ankoor">hay im a box </div>
-        <div class="box">hay im a box </div>
+        
+    <script>
+        let div = document.createElement('div');
+        div.innerHTML = "hay im inseerted into innner html by <b>by pr</b>";
+        div.setAttribute('class', 'creaed');
+        document.querySelector(".container").append(div); //there are too many methords called before after append and a lot 
+    </script>
     </div>
 </body>
 </html>
-
-<!--
-using ,   to enable design mode in the browser
--- >
