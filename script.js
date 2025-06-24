@@ -1,33 +1,16 @@
-function createCard(title, cName, views, monthsOld, duration, thumbnail) {
-    let viewstr;
-    if (views < 1000000) {
-        viewstr = Math.floor(views / 1000) + "K";
-    } else {
-        viewstr = Math.floor(views / 1000000) + "M";
-    }
+let butten = document.getElementById('btn');
+// list of all mouse events
+// https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent
+butten.addEventListener("dblclick",() =>{
+    // alert('Button clicked!'); , by ckicking it just shows an alert sigh that we have clicked 
+   
+    document.querySelector(".box").innerHTML = "<b>Button clicked!</b> enjoy your day!";  // this will change the text inside the box after clicking 
+});
 
-    let html = `
-        <div class="card">
-            <div class="image">
-                <img src="${thumbnail}" alt="thumbnail">
-                <div class="capsule">${duration}</div>
-            </div>
-            <div class="text">
-                <h1>${title}</h1>
-                <p>${cName} • ${viewstr} views • ${monthsOld} months ago</p>
-            </div>
-        </div>
-    `;
-
-    document.querySelector(".container").innerHTML += html;
-}
-
-// Call the function properly (no dot at the end!)
-createCard(
-    "Introduction to Backend | Sigma Web Dev #2",
-    "CodeWithHarry",
-    540000,
-    7,
-    "31:22",
-    "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDf-xrqgUw55JSfKsoykKVhngkzRA"
-);
+butten.addEventListener("contextmenu",() =>{  
+    alert('dont hack us by Right click please!'); // this will show an alert when right clicking the button 
+    
+    });
+document4 .addEventListener("keydown",(e) =>{  
+    console.log(e); // this will show the key that is pressed
+     });

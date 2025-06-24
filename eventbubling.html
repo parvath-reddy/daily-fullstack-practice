@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .child {
+            background-color: lightgreen;
+            border: 2px solid black;
+            padding: 14px;
+            margin: 14px;
+            cursor: pointer;
+        }
+
+        .childContainer {
+            background-color: rgb(0, 0, 0);
+            border: 2px solid black;
+            padding: 14px;
+            margin: 14px;
+            cursor: pointer;
+        }
+
+        .container {
+            background-color: rgb(255, 0, 0);
+            border: 2px solid black;
+            padding: 14px;
+            margin: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="childContainer">
+            <div class="child">
+                I'm a child
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Event bubbling demonstration
+        document.querySelector(".child").addEventListener("click", () => {
+            alert('Child was clicked');
+        });
+
+        document.querySelector(".childContainer").addEventListener("click", () => {
+            alert('ChildContainer was clicked');
+        });
+
+        document.querySelector(".container").addEventListener("click", () => {
+            alert('Container was clicked');
+        });
+
+        // Random color generator
+        function getRandomColor() {
+            const vol1 = Math.ceil(Math.random() * 255);
+            const vol2 = Math.ceil(Math.random() * 255);
+            const vol3 = Math.ceil(Math.random() * 255);
+            return `rgb(${vol1}, ${vol2}, ${vol3})`;
+        }
+
+        // Change background color every 3 seconds
+        setInterval(() => {
+            document.querySelector(".childContainer").style.background = getRandomColor();
+        }, 1000);
+        setInterval(() => {
+            document.querySelector(".child").style.background = getRandomColor();
+        }, 1000);
+        setInterval(() => {
+            document.querySelector(".container").style.background = getRandomColor();
+        }, 1000);
+        //this set interval will change the background color of the container, childContainer, and child every second and it is used to demonstrate the event bubbling effect visually.
+
+        //clear interval : is used to stop the interval from running indefinitely. You can use `clearInterval(intervalId)` where `intervalId` is the ID returned by `setInterval()`. For example: 
+        // const intervalId = setInterval(() => {
+        //     document.querySelector(".container").style.background = getRandomColor();
+        // }, 1000);
+
+        // set time out : is used to execute a function after a specified delay. It can be used to change the background color of an element after a certain time. For example:
+        // setTimeout(() => {
+        //     document.querySelector(".container").style.background = getRandomColor();// }, 3000); // This will change the background color after 3 seconds
+        // });
+
+        
+
+
+    </script>
+</body>
+
+</html>
