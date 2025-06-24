@@ -1,18 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="container">
-        <div class="box" style="flex: auto;" data-createdby="pr" data-conceptby="ankoor">hay im a box </div>
-        <div class="box">hay im a box </div>
-    </div>
-</body>
-</html>
 
-<!--
-using ,   to enable design mode in the browser
--- >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Card</title>
+  <style>
+    .container {
+      padding: 20px;
+    }
+
+    .card {
+      display: flex;
+      border: 2px solid black;
+      width: 900px;
+      margin: 20px 0;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .image {
+      position: relative;
+    }
+
+    .image img {
+      width: 200px;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .capsule {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 3px 6px;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+
+    .text {
+      padding: 10px 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .text h1 {
+      font-size: 18px;
+      margin: 0 0 5px 0;
+    }
+
+    .text p {
+      margin: 0;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
