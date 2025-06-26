@@ -1,86 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacking Simulator</title>
-    <style>
-        body {
-            background-color: green;
-            color: white;
-            font-family: monospace;
-            font-size: 20px;
-        }
-
-        .blinking {
-            display: inline-block;
-        }
-    </style>
+    <title>Document</title>
 </head>
-
 <body>
-    <!-- 
-    Creating a hacking simulator with a green background.
-    It shows these messages with a random delay of 1 to 7 seconds:
-
-    - Initializing hacking...
-    - Reading files...
-    - Password files found...
-    - Sending all passwords and personal files to server...
-    - Cleaning up...
-
-    The three dots must blink like ".", "..", "..." and repeat.
-    -->
-
-    <div id="output"></div>
-
-    <script>
-        const messages = [
-            "Initializing hacking",
-            "Reading files",
-            "Password files found",
-            "Sending all passwords and personal files to server",
-            "Cleaning up"
-        ];
-
-        function randomDelay() {
-            return new Promise((resolve) => {
-                const timeout = 1 + Math.random() * 6; // 1 to 7 seconds
-                setTimeout(resolve, timeout * 1000);
-            });
-        }
-
-        function createBlinkingText(text) {
-            const div = document.createElement("div");
-            const span = document.createElement("span");
-            span.classList.add("blinking");
-            div.textContent = text;
-            div.appendChild(span);
-
-            let dots = "";
-            let count = 0;
-            setInterval(() => {
-                count = (count + 1) % 4;
-                dots = ".".repeat(count);
-                span.textContent = dots;
-            }, 500);
-
-            return div;
-        }
-
-        async function runSimulator() {
-            const output = document.getElementById("output");
-
-            for (const msg of messages) {
-                const item = createBlinkingText(msg);
-                output.appendChild(item);
-                await randomDelay();
-            }
-        }
-
-        runSimulator();
-    </script>
+    <script src="script.js"></script>
 </body>
-
 </html>
