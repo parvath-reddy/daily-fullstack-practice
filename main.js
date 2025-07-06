@@ -1,23 +1,7 @@
- const { error } = require("console");
-const fs = require("fs")
-//  console.log(fs);
- 
- console.log('starting');
-//  fs.writeFileSync("ankoor.txt" ,"ankoor is a good boy")
- 
-fs.writeFile("harry2.txt", "harry is a good boy" ,()=>{
-    console.log("file written");
-    fs,fs.readFile("harry2.txt",(error,data)=>{
-        console.log( error , data.toString() );
-        
-    })
-})
- console.log('ending');
+// import { a, b, c, d } from "./mymodules.js"
 
- fs.appendFile("ankoor","harryrobo", (e,d)=>{
-    console.log(d.toString());
-    
+// console.log(a, b, c, d)
 
- })
- console.log('ending');
- 
+
+import obj from "./mymodules.js"
+console.log(obj) // { a: 1, b: 2, c: 3
