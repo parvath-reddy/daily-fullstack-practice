@@ -1,25 +1,23 @@
-import fs from 'fs/promises';
-import fsn from 'fs';
-import path from 'path';
+const express = require('express')
+const app = express()
+const port = 3000
 
-let folderPath = "//Users//parvathreddy//Downloads//FULL-WEBDEV//day-35-cleartheclutter";
+app.set("view engine","ejs")
+app.get('/', (req, res) => {
+    let siteName = "adidas"
+    let serchText ="search now"
+    let arr = ["hay",54,65]
+  res.render("index",{siteName:siteName ,searchText:serchText,arr})
+})
 
-let files = await fs.readdir(folderPath);
-console.log(files);
+app.get('/blog/:slug', (req, res) => {
+    let blogTitle = "adidas why and when"
+    let blogContent ="its a very good brand"
+    
+  res.render("blogpost.html",{blogTitle :blogTitle , blogContent: blogContent})
+})
 
-for (const item of files) {
-    let ext = item.split(".")[item.split(".").length - 1];
-    console.log(ext);
 
-    let extFolderPath = path.join(folderPath, ext);
-    let oldPath = path.join(folderPath, item);
-    let newPath = path.join(extFolderPath, item);
-
-    if (!fsn.existsSync(extFolderPath)) {
-        await fs.mkdir(extFolderPath);
-        console.log(`Created folder: ${ext}`);
-    }
-
-    await fs.rename(oldPath, newPath);
-    console.log(`Moved ${item} to ${ext} folder`);
-}
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
