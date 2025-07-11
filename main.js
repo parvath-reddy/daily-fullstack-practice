@@ -1,32 +1,44 @@
-const express = require('express');
-const app = express();
-const port = 3000;
+const express = require('express')
+const app = express()
+const port = 3000
+const blog = require('./routes/blog')
+const fs = require("fs")
 
-app.use(express.static("public"));
+// app.use(express.static("public"))
+
+
+app.use('/blog', blog)
+
+
+//middleware1 - logger for our application
+app.use((req, res, next) => {
+    console.log(req.headers);
+    req.ankoor = "im ankoor";
+    const time = new Date().toLocaleString();
+    fs.appendFileSync("logs.txt", `${time} is a ${req.method}\n`);
+    console.log(`${time} is a ${req.method}`);
+    next();
+});
+
+
+//middleware2
+app.use((req, res, next) => {
+    console.log('m2');
+    req.harry ="im ankoor bhai ";
+    next()
+})
+
 
 app.get('/', (req, res) => {
-  console.log('🌐 GET request received');
-  res.send('Hello from GET!');
-});
-
-app.post('/', (req, res) => {
-  console.log('🔥 POST request received');
-  res.send('Hello from POST!');
-});
-app.put('/', (req, res) => {
-  console.log('🔥 PuT request received');
-  res.send('Hello from PuT!');
-});
-
-app.get("/indexx", (req, res) => {
-  console.log('index html request');
-  res.sendFile('template/indexx.html', { root: __dirname });
-});
-
-app.get("/api", (req, res) => {
-  res.json({ a: 1, b: 2, c: 3, d: 4 })
-});
+    res.send('Hello World!')
+})
+app.get('/about', (req, res) => {
+    res.send('Hello about! ' + req.ankoor)
+})
+app.get('/contact', (req, res) => {
+    res.send('Hello contact')
+})
 
 app.listen(port, () => {
-  console.log(`🚀 Server running at http://localhost:${port}`);
-});
+    console.log(`Example app listening on port ${port}`)
+}) 
