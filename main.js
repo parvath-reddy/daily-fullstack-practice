@@ -1,44 +1,25 @@
-const express = require('express')
+import mongoose from 'mongoose';
+import express from 'express';
+import { Todo } from './models/todo.js';
+
+
+
+let conn = await mongoose.connect("mongodb://localhost:27017/todo")
+
 const app = express()
 const port = 3000
-const blog = require('./routes/blog')
-const fs = require("fs")
-
-// app.use(express.static("public"))
-
-
-app.use('/blog', blog)
-
-
-//middleware1 - logger for our application
-app.use((req, res, next) => {
-    console.log(req.headers);
-    req.ankoor = "im ankoor";
-    const time = new Date().toLocaleString();
-    fs.appendFileSync("logs.txt", `${time} is a ${req.method}\n`);
-    console.log(`${time} is a ${req.method}`);
-    next();
-});
-
-
-//middleware2
-app.use((req, res, next) => {
-    console.log('m2');
-    req.harry ="im ankoor bhai ";
-    next()
-})
-
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
-app.get('/about', (req, res) => {
-    res.send('Hello about! ' + req.ankoor)
-})
-app.get('/contact', (req, res) => {
-    res.send('Hello contact')
+  const todo = new Todo ({title: 'hay first todo ', desc : 'this is first todo and it is discribed ',isDone:false})
+  todo.save()
+  res.send('Hello World!')
 })
 
+app.get('/a', async (req, res) => {
+  let todo = await Todo.findOne();
+  res.json({ title: todo.title, desc: todo.desc });
+  
+})
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-}) 
+  console.log(`Example app listening on port ${port}`)
+})

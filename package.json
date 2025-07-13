@@ -1,16 +1,19 @@
 {
-  "name": "day-36-ejs-template-engine-in-express",
+  "name": "day-39-installing-mongooseusingitwexp",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon main.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "mongoose": "^8.16.3"
   }
 }
+ 
