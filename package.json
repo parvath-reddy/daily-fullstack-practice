@@ -1,19 +1,18 @@
 {
-  "name": "day-39-installing-mongooseusingitwexp",
+  "name": "day-40-dummy-data-generator",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
-  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon main.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "commonjs",
   "dependencies": {
+    "ejs": "^3.1.10",
     "express": "^5.1.0",
     "mongoose": "^8.16.3"
   }
 }
- 

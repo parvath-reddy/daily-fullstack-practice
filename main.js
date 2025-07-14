@@ -1,25 +1,30 @@
-import mongoose from 'mongoose';
-import express from 'express';
-import { Todo } from './models/todo.js';
-
-
-
-let conn = await mongoose.connect("mongodb://localhost:27017/todo")
-
+const express = require('express')
 const app = express()
+ const mongoose = require('mongoose')
+const Employee = require('./models/employee.js')
+mongoose.connect('mongodb://127.0.0.1:27017/company')
 const port = 3000
 
+app.set("view engine", "ejs");
+
 app.get('/', (req, res) => {
-  const todo = new Todo ({title: 'hay first todo ', desc : 'this is first todo and it is discribed ',isDone:false})
-  todo.save()
-  res.send('Hello World!')
+    res.render('index', { foo: "FOO" });
 })
 
-app.get('/a', async (req, res) => {
-  let todo = await Todo.findOne();
-  res.json({ title: todo.title, desc: todo.desc });
-  
+app.get('/genrate', async(req, res) => {
+    //generate random data 
+    for (let index = 0; index < 10; index++) {
+        let e = await Employee.create({
+            name: "ankoor",
+            salary: 45000,
+            city: " sehore ",
+            isManager: true
+        })
+        // await e.save()
+    }
+    res.render('index', { foo: "FOO" });
 })
+
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+    console.log(`Example app listening on port ${port}`)
 })
