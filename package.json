@@ -1,18 +1,17 @@
 {
-  "name": "day-40-dummy-data-generator",
+  "name": "day-41-tailwind",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build" : "@tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "dependencies": {
-    "ejs": "^3.1.10",
-    "express": "^5.1.0",
-    "mongoose": "^8.16.3"
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
   }
 }
