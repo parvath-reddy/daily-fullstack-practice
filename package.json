@@ -1,7 +1,7 @@
 {
-  "name": "day-43-whatwherehowishosting",
+  "name": "day-44-hosting-expressapp",
   "version": "1.0.0",
-  "description": "",
+  "description": "in the new bash we got from the hostinger",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,6 +11,6 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^5.1.0"
   }
 }
