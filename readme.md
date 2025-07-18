@@ -6,3 +6,13 @@
 ### step 2 - creating a sample node.js appp
 
 ### step 3 installing pm2 
+which is a packahe manager for node js 
+
+### install 4 ngnix
+usong apt install eginx 
+
+
+later editing the file of that location 
+
+
+### step 5test and resttarting nginx 
